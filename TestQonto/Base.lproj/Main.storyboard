@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QdQ-zA-uAm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Users-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestQonto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,90 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vCr-kb-WLS" customClass="UserTableView" customModule="TestQonto" customModuleProvider="target">
+                                <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" id="1zN-0I-N9T">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1zN-0I-N9T" id="mOl-Hb-5Yx">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vCr-kb-WLS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="JhD-Sc-YbX"/>
+                            <constraint firstItem="vCr-kb-WLS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rvz-Np-ecp"/>
+                            <constraint firstItem="vCr-kb-WLS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZfH-ec-8xa"/>
+                            <constraint firstItem="vCr-kb-WLS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="woe-hw-iYM"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Users" id="2iD-f5-OXu"/>
+                    <connections>
+                        <outlet property="userTableView" destination="vCr-kb-WLS" id="Bg7-c0-lr6"/>
+                        <segue destination="eFt-ho-a73" kind="show" id="Ibr-i2-7VR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1066" y="136"/>
+        </scene>
+        <!--Album List View Controller-->
+        <scene sceneID="Z21-hL-Hsg">
+            <objects>
+                <viewController storyboardIdentifier="AlbumListViewController" id="eFt-ho-a73" customClass="AlbumListViewController" customModule="TestQonto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="46j-wT-rKl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Afy-YH-rYW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uCg-4E-60K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1pz-3Z-UOs" customClass="AlbumTableView" customModule="TestQonto" customModuleProvider="target">
+                                <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1pz-3Z-UOs" firstAttribute="height" secondItem="uCg-4E-60K" secondAttribute="height" id="2MB-t1-WpO"/>
+                            <constraint firstItem="1pz-3Z-UOs" firstAttribute="width" secondItem="uCg-4E-60K" secondAttribute="width" id="DMQ-8r-IJL"/>
+                            <constraint firstItem="1pz-3Z-UOs" firstAttribute="centerX" secondItem="uCg-4E-60K" secondAttribute="centerX" id="kjp-Q0-3DG"/>
+                            <constraint firstItem="1pz-3Z-UOs" firstAttribute="centerY" secondItem="uCg-4E-60K" secondAttribute="centerY" id="tJb-jU-F8X"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="albumTableView" destination="1pz-3Z-UOs" id="pc0-5w-n1Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RYq-zm-Z34" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1729" y="137"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f8v-sU-6Hc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QdQ-zA-uAm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9hi-E8-TLr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Tdm-1U-GKb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Gc-hA-I5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="157.59999999999999" y="-545.57721139430294"/>
         </scene>
     </scenes>
 </document>

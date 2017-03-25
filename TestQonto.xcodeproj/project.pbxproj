@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22281AC51E86BFEE006CDB7E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22281AC41E86BFEE006CDB7E /* SwiftyJSON.framework */; };
+		22281ACB1E86C24E006CDB7E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22281AC41E86BFEE006CDB7E /* SwiftyJSON.framework */; };
+		22281ACC1E86C24E006CDB7E /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22281AC41E86BFEE006CDB7E /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		22281AD01E86CC67006CDB7E /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22281ACF1E86CC67006CDB7E /* AlbumListViewController.swift */; };
+		22281AD21E86CD2D006CDB7E /* AlbumTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22281AD11E86CD2D006CDB7E /* AlbumTableView.swift */; };
 		227C06231E869E2F00C0523F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C06221E869E2F00C0523F /* AppDelegate.swift */; };
 		227C06251E869E2F00C0523F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C06241E869E2F00C0523F /* ViewController.swift */; };
 		227C06281E869E2F00C0523F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C06261E869E2F00C0523F /* Main.storyboard */; };
@@ -14,6 +19,9 @@
 		227C062D1E869E2F00C0523F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C062B1E869E2F00C0523F /* LaunchScreen.storyboard */; };
 		227C06381E869E2F00C0523F /* TestQontoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C06371E869E2F00C0523F /* TestQontoTests.swift */; };
 		227C06431E869E2F00C0523F /* TestQontoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C06421E869E2F00C0523F /* TestQontoUITests.swift */; };
+		227C06531E86B22300C0523F /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 227C06521E86B22300C0523F /* users.json */; };
+		227C06561E86B33900C0523F /* UserTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C06551E86B33900C0523F /* UserTableView.swift */; };
+		227C06581E86B5D300C0523F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C06571E86B5D300C0523F /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +41,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		22281ACD1E86C24E006CDB7E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				22281ACC1E86C24E006CDB7E /* SwiftyJSON.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		22281AC41E86BFEE006CDB7E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
+		22281ACF1E86CC67006CDB7E /* AlbumListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
+		22281AD11E86CD2D006CDB7E /* AlbumTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableView.swift; sourceTree = "<group>"; };
 		227C061F1E869E2F00C0523F /* TestQonto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestQonto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		227C06221E869E2F00C0523F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		227C06241E869E2F00C0523F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +72,9 @@
 		227C063E1E869E2F00C0523F /* TestQontoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestQontoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		227C06421E869E2F00C0523F /* TestQontoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestQontoUITests.swift; sourceTree = "<group>"; };
 		227C06441E869E2F00C0523F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		227C06521E86B22300C0523F /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		227C06551E86B33900C0523F /* UserTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableView.swift; sourceTree = "<group>"; };
+		227C06571E86B5D300C0523F /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22281ACB1E86C24E006CDB7E /* SwiftyJSON.framework in Frameworks */,
+				22281AC51E86BFEE006CDB7E /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22281ACE1E86CC58006CDB7E /* AlbumList */ = {
+			isa = PBXGroup;
+			children = (
+				22281ACF1E86CC67006CDB7E /* AlbumListViewController.swift */,
+				22281AD11E86CD2D006CDB7E /* AlbumTableView.swift */,
+			);
+			name = AlbumList;
+			sourceTree = "<group>";
+		};
 		227C06161E869E2F00C0523F = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +136,10 @@
 		227C06211E869E2F00C0523F /* TestQonto */ = {
 			isa = PBXGroup;
 			children = (
+				22281ACE1E86CC58006CDB7E /* AlbumList */,
+				22281AC41E86BFEE006CDB7E /* SwiftyJSON.framework */,
+				227C06541E86B24C00C0523F /* Users */,
+				227C06511E86B21A00C0523F /* Resources */,
 				227C06501E869E3D00C0523F /* SupportFiles */,
 				227C06241E869E2F00C0523F /* ViewController.swift */,
 				227C06261E869E2F00C0523F /* Main.storyboard */,
@@ -133,6 +176,23 @@
 			name = SupportFiles;
 			sourceTree = "<group>";
 		};
+		227C06511E86B21A00C0523F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				227C06521E86B22300C0523F /* users.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		227C06541E86B24C00C0523F /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				227C06551E86B33900C0523F /* UserTableView.swift */,
+				227C06571E86B5D300C0523F /* UserModel.swift */,
+			);
+			name = Users;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +203,7 @@
 				227C061B1E869E2F00C0523F /* Sources */,
 				227C061C1E869E2F00C0523F /* Frameworks */,
 				227C061D1E869E2F00C0523F /* Resources */,
+				22281ACD1E86C24E006CDB7E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				227C06531E86B22300C0523F /* users.json in Resources */,
 				227C062D1E869E2F00C0523F /* LaunchScreen.storyboard in Resources */,
 				227C062A1E869E2F00C0523F /* Assets.xcassets in Resources */,
 				227C06281E869E2F00C0523F /* Main.storyboard in Resources */,
@@ -270,8 +332,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				227C06561E86B33900C0523F /* UserTableView.swift in Sources */,
+				22281AD21E86CD2D006CDB7E /* AlbumTableView.swift in Sources */,
 				227C06251E869E2F00C0523F /* ViewController.swift in Sources */,
+				227C06581E86B5D300C0523F /* UserModel.swift in Sources */,
 				227C06231E869E2F00C0523F /* AppDelegate.swift in Sources */,
+				22281AD01E86CC67006CDB7E /* AlbumListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +488,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = J3U2Y7TR24;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestQonto",
+				);
 				INFOPLIST_FILE = TestQonto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lin.TestQonto;
@@ -435,6 +505,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = J3U2Y7TR24;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestQonto",
+				);
 				INFOPLIST_FILE = TestQonto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lin.TestQonto;
@@ -520,6 +594,7 @@
 				227C06491E869E2F00C0523F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		227C064A1E869E2F00C0523F /* Build configuration list for PBXNativeTarget "TestQontoTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +603,7 @@
 				227C064C1E869E2F00C0523F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		227C064D1E869E2F00C0523F /* Build configuration list for PBXNativeTarget "TestQontoUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +612,7 @@
 				227C064F1E869E2F00C0523F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
