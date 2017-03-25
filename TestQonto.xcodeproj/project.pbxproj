@@ -12,6 +12,10 @@
 		22281ACC1E86C24E006CDB7E /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22281AC41E86BFEE006CDB7E /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		22281AD01E86CC67006CDB7E /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22281ACF1E86CC67006CDB7E /* AlbumListViewController.swift */; };
 		22281AD21E86CD2D006CDB7E /* AlbumTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22281AD11E86CD2D006CDB7E /* AlbumTableView.swift */; };
+		22281AD41E86E01B006CDB7E /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22281AD31E86E01B006CDB7E /* AlbumModel.swift */; };
+		22281AD61E86E64E006CDB7E /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22281AD51E86E64E006CDB7E /* GalleryViewController.swift */; };
+		22281AD91E86E70F006CDB7E /* GalleryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22281AD81E86E70F006CDB7E /* GalleryCollectionView.swift */; };
+		22281ADB1E86E9BC006CDB7E /* GalleryPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22281ADA1E86E9BC006CDB7E /* GalleryPhotoModel.swift */; };
 		227C06231E869E2F00C0523F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C06221E869E2F00C0523F /* AppDelegate.swift */; };
 		227C06251E869E2F00C0523F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C06241E869E2F00C0523F /* ViewController.swift */; };
 		227C06281E869E2F00C0523F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C06261E869E2F00C0523F /* Main.storyboard */; };
@@ -59,6 +63,10 @@
 		22281AC41E86BFEE006CDB7E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
 		22281ACF1E86CC67006CDB7E /* AlbumListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
 		22281AD11E86CD2D006CDB7E /* AlbumTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableView.swift; sourceTree = "<group>"; };
+		22281AD31E86E01B006CDB7E /* AlbumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
+		22281AD51E86E64E006CDB7E /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		22281AD81E86E70F006CDB7E /* GalleryCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCollectionView.swift; sourceTree = "<group>"; };
+		22281ADA1E86E9BC006CDB7E /* GalleryPhotoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPhotoModel.swift; sourceTree = "<group>"; };
 		227C061F1E869E2F00C0523F /* TestQonto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestQonto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		227C06221E869E2F00C0523F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		227C06241E869E2F00C0523F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,8 +117,19 @@
 			children = (
 				22281ACF1E86CC67006CDB7E /* AlbumListViewController.swift */,
 				22281AD11E86CD2D006CDB7E /* AlbumTableView.swift */,
+				22281AD31E86E01B006CDB7E /* AlbumModel.swift */,
 			);
 			name = AlbumList;
+			sourceTree = "<group>";
+		};
+		22281AD71E86E655006CDB7E /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				22281AD51E86E64E006CDB7E /* GalleryViewController.swift */,
+				22281AD81E86E70F006CDB7E /* GalleryCollectionView.swift */,
+				22281ADA1E86E9BC006CDB7E /* GalleryPhotoModel.swift */,
+			);
+			name = Gallery;
 			sourceTree = "<group>";
 		};
 		227C06161E869E2F00C0523F = {
@@ -136,8 +155,9 @@
 		227C06211E869E2F00C0523F /* TestQonto */ = {
 			isa = PBXGroup;
 			children = (
-				22281ACE1E86CC58006CDB7E /* AlbumList */,
 				22281AC41E86BFEE006CDB7E /* SwiftyJSON.framework */,
+				22281AD71E86E655006CDB7E /* Gallery */,
+				22281ACE1E86CC58006CDB7E /* AlbumList */,
 				227C06541E86B24C00C0523F /* Users */,
 				227C06511E86B21A00C0523F /* Resources */,
 				227C06501E869E3D00C0523F /* SupportFiles */,
@@ -332,10 +352,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22281AD41E86E01B006CDB7E /* AlbumModel.swift in Sources */,
+				22281ADB1E86E9BC006CDB7E /* GalleryPhotoModel.swift in Sources */,
 				227C06561E86B33900C0523F /* UserTableView.swift in Sources */,
 				22281AD21E86CD2D006CDB7E /* AlbumTableView.swift in Sources */,
+				22281AD91E86E70F006CDB7E /* GalleryCollectionView.swift in Sources */,
 				227C06251E869E2F00C0523F /* ViewController.swift in Sources */,
 				227C06581E86B5D300C0523F /* UserModel.swift in Sources */,
+				22281AD61E86E64E006CDB7E /* GalleryViewController.swift in Sources */,
 				227C06231E869E2F00C0523F /* AppDelegate.swift in Sources */,
 				22281AD01E86CC67006CDB7E /* AlbumListViewController.swift in Sources */,
 			);

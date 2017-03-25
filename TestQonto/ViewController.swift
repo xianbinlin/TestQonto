@@ -37,11 +37,11 @@ class ViewController: UIViewController {
 }
 
 protocol UserVCDelegate:class {
-    func pushToAlbumList(withUser user:User)
+    func pushToAlbumListViewController(withUser user:User)
 }
 
 extension ViewController:UserVCDelegate{
-    func pushToAlbumList(withUser user:User) {
+    func pushToAlbumListViewController(withUser user:User) {
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AlbumListViewController") as? AlbumListViewController {
             viewController.user = user
             if let navigator = navigationController {

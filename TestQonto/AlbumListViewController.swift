@@ -24,13 +24,13 @@ class AlbumListViewController: UIViewController {
 
 
 protocol AlbumVCDelegate:class {
-    func pushToAlbumList(withUser user:User)
+    func pushToAlGalleryViewController(withAlbum album:Album)
 }
 
 extension AlbumListViewController:AlbumVCDelegate{
-    func pushToAlbumList(withUser user:User) {
-        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AlbumListViewController") as? AlbumListViewController {
-            viewController.user = user
+    func pushToAlGalleryViewController(withAlbum album:Album) {
+        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GalleryViewController") as? GalleryViewController {
+            viewController.album = album
             if let navigator = navigationController {
                 navigator.pushViewController(viewController, animated: true)
             }

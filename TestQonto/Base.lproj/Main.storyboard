@@ -25,12 +25,28 @@
                                 <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" id="1zN-0I-N9T">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" textLabel="f30-h4-R5F" detailTextLabel="hdw-b5-LeV" style="IBUITableViewCellStyleSubtitle" id="1zN-0I-N9T">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1zN-0I-N9T" id="mOl-Hb-5Yx">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f30-h4-R5F">
+                                                    <rect key="frame" x="15" y="4" width="34" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hdw-b5-LeV">
+                                                    <rect key="frame" x="15" y="25" width="44" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -54,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="1066" y="136"/>
         </scene>
-        <!--Album List View Controller-->
+        <!--Albums-->
         <scene sceneID="Z21-hL-Hsg">
             <objects>
-                <viewController storyboardIdentifier="AlbumListViewController" id="eFt-ho-a73" customClass="AlbumListViewController" customModule="TestQonto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlbumListViewController" title="Albums" id="eFt-ho-a73" customClass="AlbumListViewController" customModule="TestQonto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="46j-wT-rKl"/>
                         <viewControllerLayoutGuide type="bottom" id="Afy-YH-rYW"/>
@@ -69,6 +85,32 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1pz-3Z-UOs" customClass="AlbumTableView" customModule="TestQonto" customModuleProvider="target">
                                 <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="albumCell" textLabel="akf-2H-Gra" detailTextLabel="xo4-QP-a7t" style="IBUITableViewCellStyleSubtitle" id="MVX-hD-z9U">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MVX-hD-z9U" id="CUU-zc-kfV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="akf-2H-Gra">
+                                                    <rect key="frame" x="15" y="4" width="34" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xo4-QP-a7t">
+                                                    <rect key="frame" x="15" y="25" width="44" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -81,11 +123,61 @@
                     </view>
                     <connections>
                         <outlet property="albumTableView" destination="1pz-3Z-UOs" id="pc0-5w-n1Z"/>
+                        <segue destination="Sxd-76-jzj" kind="show" id="buM-d8-tio"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RYq-zm-Z34" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1729" y="137"/>
+            <point key="canvasLocation" x="1798" y="133"/>
+        </scene>
+        <!--Gallery-->
+        <scene sceneID="GrV-gk-eEA">
+            <objects>
+                <viewController storyboardIdentifier="GalleryViewController" title="Gallery" id="Sxd-76-jzj" customClass="GalleryViewController" customModule="TestQonto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-Lf-OTr"/>
+                        <viewControllerLayoutGuide type="bottom" id="wW6-oF-8Rv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g8n-UT-YqB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fqn-a1-crd" customClass="GalleryCollectionView" customModule="TestQonto" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jIq-eh-aur">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="Iue-Cn-DFH">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fqn-a1-crd" firstAttribute="height" secondItem="g8n-UT-YqB" secondAttribute="height" id="Tir-px-ltw"/>
+                            <constraint firstItem="fqn-a1-crd" firstAttribute="width" secondItem="g8n-UT-YqB" secondAttribute="width" id="htV-Y9-d72"/>
+                            <constraint firstItem="fqn-a1-crd" firstAttribute="centerY" secondItem="g8n-UT-YqB" secondAttribute="centerY" id="s3h-oC-WuD"/>
+                            <constraint firstItem="fqn-a1-crd" firstAttribute="centerX" secondItem="g8n-UT-YqB" secondAttribute="centerX" id="skF-yL-6Ov"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="galleryCollectionView" destination="fqn-a1-crd" id="jP3-uY-LJP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tfw-dl-qbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2430" y="133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f8v-sU-6Hc">

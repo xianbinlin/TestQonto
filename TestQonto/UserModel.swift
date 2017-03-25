@@ -51,6 +51,10 @@ struct User {
     let website:String
     let company:Company
     
+   
+}
+
+extension User{
     init(userData:JSON) {
         self.id = userData["id"].int!
         self.name = userData["name"].string!

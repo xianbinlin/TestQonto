@@ -50,7 +50,7 @@ extension UserTableView:UITableViewDataSource {
 
 extension UserTableView:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.vcDelegate?.pushToAlbumList(withUser: users[indexPath.row])
+        self.vcDelegate?.pushToAlbumListViewController(withUser: users[indexPath.row])
     }
 }
 
