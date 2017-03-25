@@ -34,10 +34,31 @@ This controller contains a collectionView that shows user's photos
 - time limit, doesn't really have time to write document, but the code is really clear enough.
 
 # TODO:
-- Make collectionView in GalleryViewController
-- Check all nil option value, error handler
+- Align all lines!
 - Document all class and functions
 - reload tableView data and collectionView data smoothly
+- Check all nil option value, error handler
+for example in init() function of Model:
+
+      // before
+      init(companyData:JSON) {
+              self.name = companyData["name"].string!
+              self.catchPhrase = companyData["catchPhrase"].string!
+              self.bs = companyData["bs"].string!
+      }
+
+      // after
+      if let name = companyData["name"].string,
+                  let catchPhrase = companyData["name"].string,
+                  let bs = companyData["bs"].string{
+
+                  self.name = name
+                  self.catchPhrase = catchPhrase
+                  self.bs = bs
+      } else {
+          // handle error
+      }
+
 
 # Problem
 
