@@ -23,9 +23,11 @@ class UserTableView:UITableView{
         
         let data:Data = try! Data(contentsOf: userJsonURL)
         let json = JSON(data: data)
-        for (_,subJson):(String, JSON) in json {
-            users.append(User(userData: subJson))
-        }
+        
+        self.users = json.map(){return User(userData: $1)}
+//        for (_,subJson):(String, JSON) in json {
+//            users.append(User(userData: subJson))
+//        }
         
     }
 }
